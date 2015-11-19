@@ -1,0 +1,46 @@
+﻿@model        IEnumerable<MvcApplication1.Models.Test>
+
+
+@using MvcApplication1.Models;
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2 >Index</h2>
+@{
+  
+    Test[]  data = new Test[9]
+            {
+              new Test(1,"hayk","Yerevan"),
+              new Test(2,"aram","Gyumry"),
+              new Test(3,"ashot","Idjevan"),
+              new Test(4,"ani","Hrazdan"),
+              new Test(5,"vahe","Kapan"),
+              new Test(6,"shushan","Ararat"),
+              new Test(7,"anna","Vanadzor"),
+              new Test(8,"suren","Yerevan"),
+              new Test(9,"hayk","Yerevan"),
+            };
+ }
+<table class="table">
+    
+
+
+@for (int i = 0; i < data.Length;i++ )
+{
+    <tr>
+        <td>
+            @data[i].ToString()
+        </td>
+        
+        
+    </tr>
+}
+
+</table>
